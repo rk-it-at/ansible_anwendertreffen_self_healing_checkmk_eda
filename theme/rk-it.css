@@ -34,7 +34,7 @@ section {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
     url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
     url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
