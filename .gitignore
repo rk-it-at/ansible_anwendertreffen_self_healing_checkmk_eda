@@ -1,3 +1,5 @@
-dist
+dist/assets
+dist/index.html
+dist/slides.pdf
 node_modules
 package-lock.json
