@@ -35,8 +35,8 @@ section {
       transparent calc(100% - 1.06cm)
     ),
     url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
   padding: 2.2cm 2.2cm 2.2cm 2.2cm;
 }
@@ -102,10 +102,10 @@ section.right-bg-author {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/cmk_11.jpg") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/cmk_11.jpg") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
 }
 
@@ -125,10 +125,10 @@ section.right-bg-checkmk {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/checkmk_overview.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/checkmk_overview.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
 }
 
@@ -148,10 +148,10 @@ section.right-bg-eda {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/eda01.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/eda01.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
 }
 
@@ -171,10 +171,10 @@ section.right-flow {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/flow.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/flow.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
 }
 
@@ -194,10 +194,10 @@ section.right-bg-best-practices {
       #000000 calc(100% - 1.06cm),
       transparent calc(100% - 1.06cm)
     ),
-    url("../assets/best_practices.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
-    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
-    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
-    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    url("assets/best_practices.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
     #ffffff;
 }
 
