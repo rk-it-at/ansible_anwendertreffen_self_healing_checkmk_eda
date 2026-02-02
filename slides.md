@@ -77,6 +77,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 <!-- _backgroundSize: contain -->
 <!-- _backgroundPosition: center -->
 
+<div class="corner-logos"></div>
 <div class="footnote">
   Source: https://github.com/ansible/workshops/blob/devel/decks/ansible_rhel.pdf
 </div>
@@ -269,8 +270,10 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 
 <!-- _class: footnote-only -->
 <!-- _backgroundImage: "url('assets/eda02.png')" -->
-<!-- _backgroundSize: contain -->
+<!-- _backgroundSize: auto calc(100% - 3.5cm) -->
 <!-- _backgroundPosition: center -->
+
+<div class="corner-logos"></div>
 
 ---
 
