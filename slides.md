@@ -308,14 +308,15 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 # Additional Information
 
 - **Products**:
-  - Ansible Automation Platform: https://www.redhat.com/en/technologies/management/ansible
-  - Checkmk: https://checkmk.com/
+  - Ansible Automation Platform: https://urlr.me/WcXZgR
+  - Checkmk: https://urlr.me/BPJs98
 
 - **Product Documentation**:
-  - Ansible: https://docs.ansible.com/
-  - Automation Decisions: https://docs.redhat.com/en/documentation/red_hat_ansible_automation_platform/2.6/html/using_automation_decisions/index
-  - Rulebooks: https://docs.ansible.com/projects/rulebook/en/latest/
+  - Ansible: https://urlr.me/2x4HfW
+  - Automation Decisions: https://urlr.me/HejEDB
+  - Rulebooks: https://urlr.me/Qb4TsB
 
+- **Slides**: https://urlr.me/zCPcuK
 ---
 
 # Summary
