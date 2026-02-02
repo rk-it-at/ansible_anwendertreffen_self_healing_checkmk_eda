@@ -6,7 +6,7 @@
 @import "default";
 
 :root {
-  --cm-green: #18a303;
+  --cm-green: #51710c;
   --cm-blue: #0369a3;
   --cm-orange: #a33e03;
   --cm-purple: #8e03a3;
@@ -83,4 +83,140 @@ section::after {
   bottom: 0.25cm;
   left: 0.6cm;
   right: auto;
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+}
+
+section.right-bg-author {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/cmk_11.jpg") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+}
+
+section.right-bg-checkmk {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/checkmk_overview.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+}
+
+section.right-bg-eda {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/eda01.png") right 0.5cm center / auto calc(100% - 5cm) no-repeat,
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+}
+
+section.right-flow {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/flow.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+}
+
+section.right-bg-best-practices {
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/best_practices.png") right 0.5cm center / auto calc(100% - 4cm) no-repeat,
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+}
+
+section.code-small pre,
+section.code-small pre code,
+section.code-small code {
+  font-size: 0.7em !important;
+  line-height: 1.0 !important;
+}
+
+section.footnote-only {
+  position: relative;
+  text-align: left;
+}
+
+section.footnote-only .footnote {
+  position: absolute;
+  bottom: 1.35cm;
+  right: 0.7cm;
+  font-size: 0.45em;
+  color: #fff;
 }
