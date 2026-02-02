@@ -1,0 +1,86 @@
+/*!
+ * @theme rk-it
+ * @size 16:9
+ */
+
+@import "default";
+
+:root {
+  --cm-green: #18a303;
+  --cm-blue: #0369a3;
+  --cm-orange: #a33e03;
+  --cm-purple: #8e03a3;
+  --cm-yellow: #c99c00;
+  --cm-red: #c9211e;
+  --cm-footer: #51710c;
+  --cm-text: #111111;
+}
+
+section {
+  font-family: "Noto Sans", "Liberation Sans", "DejaVu Sans", Arial, sans-serif;
+  color: var(--cm-text);
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 1.5cm,
+      #000000 1.5cm,
+      #000000 1.54cm,
+      transparent 1.54cm
+    ),
+    linear-gradient(
+      to bottom,
+      transparent calc(100% - 1.1cm),
+      #000000 calc(100% - 1.1cm),
+      #000000 calc(100% - 1.06cm),
+      transparent calc(100% - 1.06cm)
+    ),
+    url("../assets/bg-graphic.png") center 55% / 55% auto no-repeat,
+    url("../assets/logo.png") left 0.7cm top 0.35cm / 4.8cm auto no-repeat,
+    url("../assets/shape.png") right 0.1cm bottom 0.1cm / 1.9cm auto no-repeat,
+    #ffffff;
+  padding: 2.2cm 2.2cm 2.2cm 2.2cm;
+}
+
+h1 {
+  color: var(--cm-green);
+  font-weight: 700;
+}
+
+h2 {
+  color: var(--cm-blue);
+  font-weight: 600;
+}
+
+h3 {
+  color: var(--cm-text);
+  font-weight: 600;
+}
+
+strong {
+  color: var(--cm-green);
+}
+
+ul {
+  margin-top: 0.4em;
+}
+
+li::marker {
+  color: var(--cm-green);
+}
+
+footer {
+  position: absolute;
+  bottom: 0.25cm;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--cm-footer);
+  font-size: 0.6em;
+}
+
+section::after {
+  color: var(--cm-footer);
+  font-size: 0.6em;
+  bottom: 0.25cm;
+  left: 0.6cm;
+  right: auto;
+}
