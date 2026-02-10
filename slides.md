@@ -106,6 +106,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 - Events can come from monitoring, webhooks,
   message queues, logs or cloud services
 - Rules decide **when** to run Ansible actions
+- Optimized resource consumption compared to AAP job runs
 - Goal: **faster response** and **consistent**
   **remediation**
 
@@ -138,7 +139,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 
 - 📡 **Event Sources**: where events originate (webhooks, Kafka, logs, etc.)
 - 📘 **Rulebook**: conditions + actions
-- 🛠️ **Actions**: run playbooks, set facts, send notifications, create tickets
+- 🛠️ **Actions**: run playbooks, run job templates, run module, etc.
 - 🧭 **Controller** (optional): central execution and governance
 
 ---
