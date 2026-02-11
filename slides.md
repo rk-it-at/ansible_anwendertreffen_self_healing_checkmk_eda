@@ -40,16 +40,15 @@ footer: Ansible Anwendertreffen Austria 02/2026
 
 # Agenda
 
-- Monitoring: the past and the present
-- What is Checkmk?
+- Monitoring: Short introduction
 - What is Event-Driven Ansible (EDA)?
 - Event-Driven Workflow
+- Live Demonstration
 - Use cases and best practices
-- (Live Demonstration)
 
 ---
 
-# Monitoring: the past and the present
+# Monitoring: Typical workflow
 
 - 🕰️ 2005: Received email alerts from Nagios 2 for issues with Solaris machines
 - 🧩 Manual workflow:
@@ -58,17 +57,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
   - 🔎 Check if issue still exists
   - 🛠️ Fix the issue
   - 🤬 **Repeat the same procedure over and over again**
-
----
-
-# Monitoring: the past and the present
-
-- 🤖 Today: Use EDA to decide if issues can be fixed with Ansible
-- ⚡ Automated workflow:
-  - 🧠 EDA analyzes the issue
-  - 🚀 Triggers an AAP template if it can be fixed
-  - 🧾 Ansible playbook solves the issue
-  - 🙋 Handle only exceptional issues manually
+- 🕰️ 2026: Still the same workflow?
 
 ---
 
@@ -101,12 +90,11 @@ footer: Ansible Anwendertreffen Austria 02/2026
 <!-- _class: right-bg-eda -->
 # What is Event-Driven Ansible?
 
-- **EDA is automation that reacts to events** - not
+- **EDA is automation that reacts to events**, not
   schedules
 - Events can come from monitoring, webhooks,
   message queues, logs or cloud services
 - Rules decide **when** to run Ansible actions
-- Optimized resource consumption compared to AAP job runs
 - Goal: **faster response** and **consistent**
   **remediation**
 
@@ -126,26 +114,38 @@ footer: Ansible Anwendertreffen Austria 02/2026
 
 ---
 
-# Why EDA?
+# Event-Driven Ansible vs. Ansible Playbook
 
-- ⚡ **Reduce MTTR** by acting immediately
-- 📈 **Scale operations** without polling
-- 🧩 **Standardize** responses to recurring incidents
-- 🔁 **Close the loop** between detection and remediation
+- ⚡ **EDA** keeps a listener running and reacts to events in near real time
+- 🧠 **EDA** evaluates event payloads and triggers automation only when rules match
+- 📜 **Ansible Playbooks** do not listen for events out of the box
+- 🔔 Without EDA, the monitoring source must trigger playbook runs directly
+- 🧱 This increases load and complexity on the monitoring system
+
+---
+
+# Event-Driven Ansible vs. AAP Controller
+
+- ⚡ **EDA** keeps an event listener active and can trigger job templates immediately
+- 🌐 **AAP Controller** can start jobs via webhook or API, but each job is a full run lifecycle
+- 🐢 Job startup overhead (container start, project sync, inventory/collections) adds latency
+- 🚦 Job execution may queue behind other jobs, which delays reaction time
+- 🎯 Use EDA for fast event decisions; use Controller for governed execution of the actual remediation
 
 ---
 
 # Core Building Blocks
 
-- 📡 **Event Sources**: where events originate (webhooks, Kafka, logs, etc.)
-- 📘 **Rulebook**: conditions + actions
-- 🛠️ **Actions**: run playbooks, run job templates, run module, etc.
+- 📡 **Event Sources**: where events originate (ansible.eda plugins for webhooks, Kafka, Altermanager, etc.)
+- 📘 **Rulebook**: Rulesets with conditions + actions
+- 🔎 **Conditions**: Determine if a rule fires
+- 🛠️ **Actions**: run playbooks, run job templates, run modules, etc.
 - 🧭 **Controller** (optional): central execution and governance
 
 ---
 
 <!-- _class: right-flow -->
-# Event Driven Workflow
+# Event-Driven Workflow
 
 1. Event arrives from a source
 2. Rulebook evaluates conditions
@@ -156,7 +156,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 ---
 
 <!-- _class: code-small -->
-# Rulebook: restart named
+# Rulebook: Restart named
 
 ```yaml
 ---
@@ -216,7 +216,7 @@ exit $?
 
 ---
 
-# Playbook: restart named
+# Playbook: Restart named
 <!-- _class: code-small -->
 
 ```yaml
@@ -254,8 +254,7 @@ PLAY RECAP *********************************************************************
 ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ignored=0 
 ```
 
-❗Use **run_playbook** action instead of **run_job_template**  for ansible-playbook
-  command instead of Ansible Automation Platform.
+❗Use the **run_playbook** action (instead of **run_job_template**) when running with ansible-playbook outside Ansible Automation Platform.
 
 ---
 
@@ -263,7 +262,7 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 
 - 📦 **Projects**: Git repository configuration
 - 🧪 **Decision Environments**: Container images to run rulebooks
-- 🔐 **Credentials**: Secrets for Git, Controller, Hub, tokens,...
+- 🔐 **Credentials**: Secrets for Git, Controller, Hub, tokens, etc.
 - 📡 **Event Streams**: Entry points for events (mapped to source definition in rulebook)
 - 🚀 **Rulebook Activations**: Rulebook runs
 
@@ -278,18 +277,12 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 
 ---
 
-# Event-Driven Ansible Use Cases
-
-- 🚨 **Monitoring alerts**: run remediation playbooks
-- 🏗️ **Infrastructure events**: auto-scale or restart services
-- 🔐 **Security findings**: isolate hosts or rotate credentials
-- 🎫 **Ticketing**: enrich and open incidents automatically
-- 📘 **Documentation**: update asset database or documentation system
+# Live Demo: Fix DNS issue
 
 ---
 
 <!-- _class: right-bg-best-practices -->
-# Self Healing Best Practices
+# Self-Healing Best Practices
 
 - Start with **low-risk** automations
 - Use **idempotent** playbooks (if possible)
@@ -309,6 +302,16 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 
 ---
 
+# Event-Driven Ansible Use Cases
+
+- 🚨 **Monitoring alerts**: run remediation playbooks
+- 🏗️ **Infrastructure events**: auto-scale or restart services
+- 🔐 **Security findings**: isolate hosts or rotate credentials
+- 🎫 **Ticketing**: enrich and open incidents automatically
+- 📘 **Documentation**: update asset database or documentation system
+
+---
+
 # Additional Information
 
 - **Products**:
@@ -320,7 +323,6 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
   - Automation Decisions: https://urlr.me/HejEDB
   - Rulebooks: https://urlr.me/Qb4TsB
 
-- **Slides**: https://urlr.me/zCPcuK
 ---
 
 # Summary
@@ -338,3 +340,5 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 René Koch
 Freelancer
 Ansible Anwendertreffen Austria 18.02.2026
+
+Slides: https://urlr.me/zCPcuK
