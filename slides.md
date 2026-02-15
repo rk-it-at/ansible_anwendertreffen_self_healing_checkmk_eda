@@ -105,6 +105,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 - ⚡ **Event**
   - a *state change* or *signal* that matters (e.g., alert fired, service down)
   - often noisy and hard to filter
+  - not every event triggers an action
 - 🔁 **Source action**
   - a *routine trigger* (e.g., "on every commit")
   - predefined target/action
