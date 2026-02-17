@@ -137,7 +137,7 @@ footer: Ansible Anwendertreffen Austria 02/2026
 
 # Core Building Blocks
 
-- 📡 **Event Sources**: where events originate (ansible.eda plugins for webhooks, Kafka, Altermanager, etc.)
+- 📡 **Event Sources**: where events originate (ansible.eda plugins for webhooks, Kafka, Alertmanager, etc.)
 - 📘 **Rulebook**: Rulesets with conditions + actions
 - 🔎 **Conditions**: Determine if a rule fires
 - 🛠️ **Actions**: run playbooks, run job templates, run modules, etc.
@@ -298,7 +298,7 @@ ipa01.example.com : ok=2 changed=1 unreachable=0 failed=0 skipped=0 rescued=0 ig
 - 🔊 Triggering on noisy events (missing filtering)
 - 🧪 Insufficient monitoring coverage
 - 🧯 Healing the wrong host (issue caused by a backend dependency)
-- 📚 Lack of knowledge or runbooks
+- 📚 Lack of knowledge or rulebooks
 - 🕒 Triggering during maintenance windows due to missing downtime
 
 ---
